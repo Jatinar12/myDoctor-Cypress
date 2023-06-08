@@ -7,7 +7,7 @@ When('User clicks on Specialities tab', () => {
     doctorSpecification.getspecialities()
 })
 
-Then('User should navigate to all specialist fields', () => {
+Then('User should navigate to all specialist page', () => {
     doctorSpecification.getHeading()  //specaloty
 })
 
@@ -30,7 +30,7 @@ Then('User is on doctor specification page', () => {
     doctorSpecification.getDoctorInfo()
 })
 
-When('User selects the date', () => {
+When('User selects the date tab', () => {
     doctorSpecification.getDateTab()
 })
 
@@ -38,16 +38,16 @@ Then('corresponding available slots should display', () => {
     doctorSpecification.getSlots()
 })
 
-When('User clicks on slots', () => {
+When('User clicks on available slots', () => {
     doctorSpecification.getSlotClick()
 })
 
-Then('User should Register to book appointment', () => {
+Then('User should able to Register', () => {
     doctorSpecification.getSignIn()
 })
 
-When('User clicks on Specialities', () => {
-    doctorSpecification.getSpeciality()
+When('User clicks on {string}', (Element) => {
+    doctorSpecification.getSpeciality(Element)
 })
 
 Then('doctor speciality should display', () => {
@@ -74,7 +74,7 @@ When('User clicks on write a review', () => {
     doctorSpecification.getReview()
 })
 
-Then('Rating and write a review fields display', () => {
+Then('Available fields shoud be display', () => {
     doctorSpecification.getFields()
 })
 
@@ -90,14 +90,14 @@ When('User enters the submit button', () => {
     doctorSpecification.getSubmit()
 })
 
-Then('doctor info page will be loaded', () => {
+Then('doctor specification page will be re-loaded', () => {
     doctorSpecification.getDoctorInfo()
 })
 
-Then('User has to signIn to book appointment', () => {
-    doctorSpecification.getSignIn()
+Then('User should get {string}', (Message) => {
+    doctorSpecification.getSignIn(Message)
 })
 
-When('User clicks on signIn', () => {
+When('User clicks on signIn link', () => {
     doctorSpecification.getSignInLink()
 })
